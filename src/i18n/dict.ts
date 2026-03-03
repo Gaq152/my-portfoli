@@ -3,10 +3,10 @@ export type Language = 'en' | 'zh';
 export const dictionaries = {
     en: {
         hero: {
-            status: "Open to new opportunities",
+            status: "Open to Full Stack roles",
             greeting: "Hi, I'm",
-            role: "Full Stack Software Engineer building scalable services and modern UI.",
-            description: "Passionate about bridging the gap between elegant frontend experiences (Next.js/React) and robust backend architectures (Python/Node.js). Exploring the frontiers of AI, MLOps, and model training like YOLO11.",
+            role: "AI Algorithm Application Engineer focused on Edge Deployment to Backend Architecture, expanding into Full Stack.",
+            description: "Experienced in the entire ML lifecycle from data pipeline construction to deploying YOLO (v8/v11) on Edge devices. I specialize in backend systems using Go and Python, and I am driven to integrate modern frontend practices (Next.js/React) to engineer end-to-end, AI-powered solutions.",
             github: "GitHub Profile",
             contact: "Contact Me"
         },
@@ -32,18 +32,18 @@ export const dictionaries = {
     },
     zh: {
         hero: {
-            status: "寻找新的求职机会中",
+            status: "开放寻找全栈岗位",
             greeting: "你好，我是",
-            role: "全栈软件工程师，专注于构建可扩展的后端服务与现代化UI。",
-            description: "热衷于连接优雅的前端体验（Next.js/React）与健壮的后端架构（Python/Node.js）。同时在探索人工智能、MLOps 以及如 YOLO11 等模型训练的前沿技术。",
+            role: "AI 算法应用工程师，聚焦于模型落地与后端架构，正向全栈领域发力。",
+            description: "具备 YOLO (v8/v11) 等前沿算法从“业务侧痛点分析 -> 数据迭代流水线构建 -> 边缘端设备部署落地”的完整工程结界。目前主要使用 Go 与 Python 构建健壮的后端应用架构，并致力于将 Next.js/React 开发经验沉淀融合，旨在交付由 AI 驱动、端到端的高级全栈解决方案。",
             github: "GitHub 主页",
             contact: "联系我"
         },
         skills: {
             title: "技术栈",
             frontend: "前端开发",
-            backend: "后端服务",
-            cloud: "云计算与数据库",
+            backend: "后端与容器化",
+            cloud: "系统与运维",
             ai: "人工智能与工具"
         },
         projects: {
@@ -54,7 +54,7 @@ export const dictionaries = {
         },
         contact: {
             title: "让我们一起创造卓越。",
-            desc: "目前正在寻找快节奏环境中的新机会，期待能发挥我的全栈技能，并深入研究 AI 集成应用。",
+            desc: "目前正在积极寻找快节奏、高强度的工程环境中的新机会，期待能发挥我的全栈与 AI 集成技能。",
             emailBtn: "给我发邮件 →"
         },
         toggle: "English"
