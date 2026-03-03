@@ -67,7 +67,7 @@ export default function PortfolioClient({
                         {t.hero.status}
                     </div>
                     <h1 className="text-5xl sm:text-7xl font-bold tracking-tight">
-                        {t.hero.greeting} <span className="text-gradient">Gaq152</span>.
+                        {t.hero.greeting} <span className="text-gradient">anlife</span>.
                     </h1>
                     <h2 className="text-2xl sm:text-3xl font-medium text-zinc-400 mt-2 max-w-3xl leading-snug">
                         {t.hero.role}
@@ -92,10 +92,10 @@ export default function PortfolioClient({
                         {t.skills.title}
                     </h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        <SkillCard title={t.skills.frontend} skills={["TypeScript", "React", "Next.js", "TailwindCSS"]} icon="⚛️" />
-                        <SkillCard title={t.skills.backend} skills={["Python", "Node.js", "RESTful APIs", "Serverless"]} icon="⚙️" />
-                        <SkillCard title={t.skills.cloud} skills={["GCP", "Vercel", "MongoDB", "NoSQL"]} icon="☁️" />
-                        <SkillCard title={t.skills.ai} skills={["MLOps", "YOLO11", "GitHub Actions", "Docker"]} icon="🤖" />
+                        <SkillCard title={t.skills.frontend} skills={["TypeScript/JavaScript", "React", "Next.js", "TailwindCSS"]} icon="⚛️" />
+                        <SkillCard title={t.skills.backend} skills={["Go", "Python", "SQLite3", "REST APIs"]} icon="⚙️" />
+                        <SkillCard title={t.skills.cloud} skills={["Linux (GPU/NPU)", "Docker", "GCP", "Nginx"]} icon="☁️" />
+                        <SkillCard title={t.skills.ai} skills={["YOLO (v8/v11)", "MLOps", "CVAT / LabelImg", "CI/CD (Actions)"]} icon="🤖" />
                     </div>
                 </section>
 
