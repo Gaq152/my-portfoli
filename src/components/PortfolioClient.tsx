@@ -124,9 +124,23 @@ export default function PortfolioClient({
                     <p className="text-zinc-400 mb-10 max-w-xl mx-auto">
                         {t.contact.desc}
                     </p>
-                    <a href={`mailto:${email}`} className="text-xl font-medium text-gradient hover:opacity-80 transition-opacity">
-                        {t.contact.emailBtn}
-                    </a>
+                    <div className="flex flex-col items-center gap-4">
+                        <a href={`mailto:${email}`} className="text-xl font-medium text-gradient hover:opacity-80 transition-opacity">
+                            {t.contact.emailBtn}
+                        </a>
+                        <button
+                            onClick={(e) => {
+                                navigator.clipboard.writeText(email);
+                                const target = e.currentTarget;
+                                const originalText = target.innerText;
+                                target.innerText = lang === 'zh' ? "✅ 已复制到剪贴板" : "✅ Copied to clipboard";
+                                setTimeout(() => { target.innerText = originalText; }, 2000);
+                            }}
+                            className="text-sm text-zinc-500 hover:text-zinc-300 transition-colors underline decoration-zinc-500/50 underline-offset-4"
+                        >
+                            {lang === 'zh' ? "邮件客户端没反应？点击复制邮箱地址" : "No mail client? Click to copy email address"}
+                        </button>
+                    </div>
                 </section>
 
             </main>
