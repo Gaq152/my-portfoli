@@ -129,12 +129,28 @@ export default function PortfolioClient({
                             {t.contact.emailBtn}
                         </a>
                         <button
-                            onClick={(e) => {
-                                navigator.clipboard.writeText(email);
+                            onClick={async (e) => {
                                 const target = e.currentTarget;
                                 const originalText = target.innerText;
-                                target.innerText = lang === 'zh' ? "✅ 已复制到剪贴板" : "✅ Copied to clipboard";
-                                setTimeout(() => { target.innerText = originalText; }, 2000);
+                                try {
+                                    if (navigator.clipboard && window.isSecureContext) {
+                                        await navigator.clipboard.writeText(email);
+                                    } else {
+                                        const textArea = document.createElement("textarea");
+                                        textArea.value = email;
+                                        textArea.style.position = "absolute";
+                                        textArea.style.left = "-999999px";
+                                        document.body.prepend(textArea);
+                                        textArea.select();
+                                        try { document.execCommand('copy'); } catch (error) { console.error(error); }
+                                        finally { textArea.remove(); }
+                                    }
+                                    target.innerText = lang === 'zh' ? "✅ 已复制到剪贴板" : "✅ Copied to clipboard";
+                                } catch (error) {
+                                    console.error(error);
+                                } finally {
+                                    setTimeout(() => { target.innerText = originalText; }, 2000);
+                                }
                             }}
                             className="text-sm text-zinc-500 hover:text-zinc-300 transition-colors underline decoration-zinc-500/50 underline-offset-4"
                         >
